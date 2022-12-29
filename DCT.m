@@ -1,4 +1,3 @@
-function[]=myDCT()  %my compression function
 
 %read the original  file and convert it to a variable
 [x, f] =audioread('sound.wav');
@@ -37,23 +36,8 @@ plot(xCompressed4), title('Compression Factor 4'), axis(axis(h2));
 subplot(2,1,2)
 plot(xCompressed8), title('Compression Factor 8'), axis(axis(h2));
 
-%playing files
-%original audio
-% sound(x,f,16);
-% pause(10);
-%compressed signal 1 
-% sound(xCompressed2,f,16);
-% pause(10);
-%compressed signal 2 
-% sound(xCompressed4,f,16);
-% pause(10);
-%compressed signal 3
-% sound(xCompressed8,f,16);
-% pause(10);
-
 %saving audio files
 audiowrite('Compressed_file_factor_2.wav',xCompressed2,f);
 audiowrite('Compressed_file factor_4.flac',xCompressed4,f);
 audiowrite('Compressed_file factor_8.oga',xCompressed8,f);
 
-end
