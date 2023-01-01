@@ -30,7 +30,6 @@ for thresh = 0.3 * 0.1 * max(abs(X_K(:)));
     ind = abs(X_K)>thresh;
     xFilt=X_K.*ind;
     count=N-sum(ind(:));
-    percent = 100-count/N*100; % how many frequencies remaining
 
     %  ifft convert the signal form frequency domain to time domain
     xFF=ifft2(xFilt);
